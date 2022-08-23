@@ -1,4 +1,4 @@
-// create elements for intro
+// create elements for question 1
 var h1El = document.createElement("h1");
 var paraEl = document.createElement("p");
 var q1A1El = document.createElement("button");
@@ -6,18 +6,16 @@ var q1A2El = document.createElement("button");
 var q1A3El = document.createElement("button");
 var q1A4El = document.createElement("button");
 
-// provide the content for intro
+// provide the content for question 1
 h1El.textContent = "Question 1:";
-paraEl.textContent = "Commonly used data types DO NO include:";
-// node = document.createTextNode("");
+paraEl.textContent = "Commonly used data types DO NOT include:";
 q1A1El.textContent = "1. strings";
 q1A2El.textContent = "2. booleans";
 q1A3El.textContent = "3. alerts";
 q1A4El.textContent = "4. numbers";
 
-// paraEl.appendChild(node);
 
-// append to question container on page
+// append to question container on page (question 1)
 document.getElementById("question-container").appendChild(h1El);
 document.getElementById("question-container").appendChild(paraEl);
 document.getElementById("question-container").appendChild(q1A1El);
@@ -26,17 +24,57 @@ document.getElementById("question-container").appendChild(q1A3El);
 document.getElementById("question-container").appendChild(q1A4El);
 
 
-// for each question
 
-// create the container el that hold the question and choices
 
-// create the el that hold the question
+// question anwsers
+var questions = [{
+    id: 1,
+    q: "Commonly used data types DO NO include.",
+    a: [{ text: "strings", isCorrect: false },
+        { text: "booleans", isCorrect: false },
+        { text: "alerts", isCorrect: true },
+        { text: "numbers", isCorrect: false }
+        ]
+    },
+    {
+        id: 2,
+        q: "The condition in an if/else statement is enclosed within ___.",
+        a: [{text: "quotes", isCorrect: false},
+            {text: "curly brackets", isCorrect: false},
+            {text: "parentheses", isCorrect: true},
+            {text: "square brackets", isCorrect: false}
+        ]
+    },
+    {
+        id: 3,
+        q: "Arrays in JavaScript can be used to store ___.",
+        a: [{text: "numbers and strings", isCorrect: false},
+            {text: "other arrays", isCorrect: false},
+            {text: "booleans", isCorrect: false},
+            {text: "all of the above", isCorrect: true}
+        ]
+    },
+    {
+        id: 4,
+        q: "String values must be enclosed within ___ when beging assigned to variables.",
+        a: [{text: "commas", isCorrect: false},
+            {text: "curly brackets", isCorrect: false},
+            {text: "quotes", isCorrect: true},
+            {text: "parentheses", isCorrect: false}
+        ]
+    },
+    {
+        id: 5,
+        q: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        a: [{text: "JavaScript", isCorrect: false},
+            {text: "terminal/bash", isCorrect: false},
+            {text: "for loops", isCorrect: false},
+            {text: "console.log", isCorrect: true}]
+    }
+]
 
-// create the text node that is the question
-// add the text node to the question el
-// add any attr that you thing are good
 
-// add the question el to the question container
+
 
 // for each option 
 // create some sort of button el that can hold an option
@@ -46,13 +84,18 @@ document.getElementById("question-container").appendChild(q1A4El);
 
 // add the first container
 
-document.querySelector('#clickTest').addEventListener('click', evaluateAnswer)
+// document.querySelector(q1A1El).addEventListener('click', evaluateAnswer)
 
-function evaluateAnswer(event) {
+// function evaluateAnswer(event) {
+//     if {
+        
+//     }
 
     console.log(event);
     // find out what question is on the screen
+
     // find out what answer is for that question
+
     // find out what button was clicked
 
     // determine if they were correct
@@ -61,7 +104,7 @@ function evaluateAnswer(event) {
     // remove the current container
     // add the next container
     // if thats the last question do the hi score thing
-}
+// }
 
 
 // let value = { tutor: "byron"};
@@ -71,20 +114,4 @@ function evaluateAnswer(event) {
 // let item = localStorage.getItem("key");
 // item = JSON.parse(item);
 
-
-
-
-
-
-
-
-// create elements for questions
-var questionEl = document.createElement("div");
-// Create ordered list element for answers
-var listEl = document.createElement("ol");
-// Create ordered list items for each possible answer
-var li1 = document.createElement("li");
-var li2 = document.createElement("li");
-var li3 = document.createElement("li");
-var li4 = document.createElement("li");
 
